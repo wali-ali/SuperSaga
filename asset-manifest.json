@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SuperSaga/static/css/main.287b7015.css",
+    "main.js": "/SuperSaga/static/js/main.cdb242f7.js",
+    "index.html": "/SuperSaga/index.html",
+    "main.287b7015.css.map": "/SuperSaga/static/css/main.287b7015.css.map",
+    "main.cdb242f7.js.map": "/SuperSaga/static/js/main.cdb242f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.287b7015.css",
+    "static/js/main.cdb242f7.js"
+  ]
+}
