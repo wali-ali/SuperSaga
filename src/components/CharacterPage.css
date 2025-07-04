@@ -1,0 +1,73 @@
+/* Overall container for character detail section */
+.character-detail {
+  padding: 40px;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Large image of selected character */
+.detail-image {
+  max-width: 300px;
+  border-radius: 16px;
+  margin: 20px;
+}
+
+/* Button to go back to the character grid */
+.back-button {
+  background: white;
+  color: black;
+  padding: 8px 16px;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Container for skill bars and stats section */
+.skills-section {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+/* "Skills" heading style with glowing neon effect */
+.skills-section h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Individual skill block spacing */
+.skill-bar {
+  margin-bottom: 16px;
+}
+
+/* Skill name label above the bar */
+.skill-bar span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ddd;
+}
+
+/* Empty bar background */
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Filled portion of skill bar with animated glow */
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  box-shadow: 0 0 10px #00ffff;
+  transition: width 1s ease-in-out;
+}

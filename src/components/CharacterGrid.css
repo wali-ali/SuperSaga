@@ -1,0 +1,74 @@
+/* 🧱 Grid layout for all character cards */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 40px;
+}
+
+/* 🎴 Base styling for each character card */
+.character-card {
+  background-color: #111111; /* Neutral dark background */
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 💫 Hover animation for lift effect */
+.character-card:hover {
+  transform: translateY(-8px);
+}
+
+/* 🔷 Unique glowing color effect for each character on hover */
+.character-card.iron-man-glow:hover {
+  box-shadow: 0 0 25px 5px gold;
+}
+.character-card.spider-man-glow:hover {
+  box-shadow: 0 0 25px 5px #fc0909;
+}
+.character-card.thor-glow:hover {
+  box-shadow: 0 0 25px 5px #00bfff;
+}
+.character-card.captain-america-glow:hover {
+  box-shadow: 0 0 25px 5px rgb(56, 56, 239);
+}
+.character-card.hulk-glow:hover {
+  box-shadow: 0 0 25px 5px rgb(61, 218, 4);
+}
+.character-card.black-widow-glow:hover {
+  box-shadow: 0 0 25px 5px rgb(236, 166, 3);
+}
+.character-card.black-panther-glow:hover {
+  box-shadow: 0 0 25px 5px rgb(213, 6, 232);
+}
+.character-card.hawkeye-glow:hover {
+  box-shadow: 0 0 25px 5px rgb(201, 18, 201);
+}
+
+/* 📷 Image inside each card */
+.character-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: block;
+}
+
+/* 🏷 Label section below image */
+.character-label {
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.character-label h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+}

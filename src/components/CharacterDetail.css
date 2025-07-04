@@ -1,0 +1,251 @@
+/* 🔲 Fullscreen overlay when character detail is open */
+.character-detail-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 📄 Card container for character detail */
+.character-detail-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ❌ Close button (top-right corner) */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* 👤 Main content layout inside card */
+.character-content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* 📑 Left section (name, gif, origin, signature) */
+.main-section {
+  flex: 2;
+}
+
+/* 🌀 Main character gif */
+.main-gif {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* 📖 Origin text */
+.origin-text {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+/* 📸 Right section: supporting side images */
+.side-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 🖼️ Small thumbnails */
+.side-thumbnail {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ✨ Signature icon section */
+.signature-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 🔁 Pulsing animated icon */
+.signature-icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* 📦 Fade transition for opening and closing */
+.character-detail-container {
+  padding: 40px;
+  animation: fadeIn 0.4s ease;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(30px); }
+}
+
+/* 🔳 Container for expanded detail page (other layout version) */
+.character-detail {
+  display: flex;
+  gap: 30px;
+  background-color: #0a0a0a;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.05);
+  align-items: flex-start;
+}
+
+/* 📷 Big image on left side */
+.detail-image-section img {
+  width: 320px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+/* 🧾 Text section (middle) */
+.detail-info-section {
+  flex: 1;
+  color: #fff;
+}
+
+.detail-info-section h2 {
+  font-size: 2.4rem;
+  color: #00ffcc;
+  margin-bottom: 10px;
+}
+
+.detail-info-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.detail-info-section strong {
+  color: #fff;
+}
+
+/* 🌀 Icon/GIF on right */
+.detail-symbol-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.symbol-gif {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  object-fit: cover;
+}
+
+/* 🔙 Back to Grid Button */
+.back-button {
+  background-color: #00ffaa;
+  color: black;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px #00ffaa;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00dd99;
+}
+
+/* 📊 Glowing Skill Bars */
+.skills-section {
+  margin-top: 30px;
+}
+
+.skills-section h2 {
+  color: #00ffcc;
+  margin-bottom: 15px;
+}
+
+.skill-bar {
+  margin-bottom: 12px;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+/* Empty base of the bar */
+.bar {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 14px;
+}
+
+/* Animated fill */
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffcc, #00ccff);
+  width: 0;
+  animation: growBar 1s ease-out forwards;
+}
+
+@keyframes growBar {
+  from { width: 0; }
+  to { width: var(--bar-width); }
+}
+
+/* 📱 Responsive behavior for smaller screens */
+@media (max-width: 800px) {
+  .character-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detail-image-section img {
+    width: 90%;
+  }
+
+  .detail-symbol-section {
+    margin-top: 20px;
+  }
+}

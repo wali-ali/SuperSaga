@@ -1,0 +1,245 @@
+/*  NAVBAR STYLES – Fixed top navbar with glowing title */
+.navbar {
+  background-color: #0b0c10; /* dark background */
+  color: #00ffc8; /* glowing teal text */
+  padding: 16px 32px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffc8a8; /* glowing border */
+}
+
+/*  HERO SECTION – Full screen intro with centered text */
+.hero-section {
+  height: 100vh;
+  background: radial-gradient(circle at center, #1f1c2c, #0b0c10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  color: #00ffc8;
+  text-shadow: 0 0 15px #00ffc888;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/*  Smooth CTA button below hero */
+.scroll-link {
+  background-color: #00ffc8;
+  color: #000;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 12px #00ffc8;
+  transition: transform 0.2s;
+}
+
+.scroll-link:hover {
+  transform: scale(1.1);
+}
+
+/* CHARACTER GRID – Wraps all hero cards */
+.character-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #0b0c10;
+}
+
+/*  Individual character card with glowing hover effect */
+.character-card {
+  width: 220px;
+  height: 300px;
+  margin: 16px;
+  border: 4px solid;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px 8px rgba(0, 255, 200, 0.3); /* subtle glow */
+}
+
+.card-image {
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-name {
+  height: 20%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+/*  CHARACTER DETAIL SECTION – After clicking a card */
+.character-detail-container {
+  padding: 30px;
+  background-color: #0b0c10;
+  color: white;
+}
+
+/* Back to grid button */
+.back-button {
+  background-color: #00ffc8;
+  color: #000;
+  padding: 10px 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffc8;
+  transition: transform 0.2s;
+}
+
+.back-button:hover {
+  transform: scale(1.05);
+}
+
+/*  Main character detail layout using flex */
+.character-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/*  Left side image */
+.detail-image-section {
+  flex: 1 1 30%;
+}
+
+.detail-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+/* 📝 Middle info section */
+.detail-info-section {
+  flex: 1 1 40%;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.detail-info-section h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #00ffc8;
+}
+
+/* 🎞 Right side GIF or logo */
+.detail-symbol-section {
+  flex: 1 1 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.symbol-gif {
+  max-width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffc8aa;
+}
+
+/* ✅ Animations for smooth appearance/disappearance */
+.fade-in {
+  animation: fadeIn 0.6s ease-in forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease-in forwards;
+  opacity: 1;
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* Glowing Skills Section – Intelligence, Strength etc. */
+.skills-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.skills-section h2 {
+  color: #00ffff;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.skill-bar {
+  margin-bottom: 15px;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 6px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 🟦 Skill value bar with gradient glow */
+.bar {
+  width: 100%;
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  box-shadow: 0 0 8px #00ffff;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}

@@ -1,0 +1,34 @@
+/* 🃏 Base style for each individual character card */
+.character-card {
+  width: 220px;
+  height: 300px;
+  margin: 16px;
+  border: 4px solid; /* color is expected to come from dynamic theme class */
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* smooth zoom effect on hover */
+}
+
+/* 🔍 Slight zoom effect on hover */
+.character-card:hover {
+  transform: scale(1.08);
+}
+
+/* 🖼️ Image section of the card (takes up 80%) */
+.card-image {
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* 🏷️ Name section at the bottom of the card */
+.card-name {
+  height: 20%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
