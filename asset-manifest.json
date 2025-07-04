@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SuperSaga/static/css/main.287b7015.css",
-    "main.js": "/SuperSaga/static/js/main.cdb242f7.js",
+    "main.js": "/SuperSaga/static/js/main.0c76e976.js",
     "index.html": "/SuperSaga/index.html",
     "main.287b7015.css.map": "/SuperSaga/static/css/main.287b7015.css.map",
-    "main.cdb242f7.js.map": "/SuperSaga/static/js/main.cdb242f7.js.map"
+    "main.0c76e976.js.map": "/SuperSaga/static/js/main.0c76e976.js.map"
   },
   "entrypoints": [
     "static/css/main.287b7015.css",
-    "static/js/main.cdb242f7.js"
+    "static/js/main.0c76e976.js"
   ]
 }
