@@ -1,4 +1,11 @@
-# SuperSaga 🔥
+# SuperSaga 🚀
+
+A modern React-based Marvel Character Info App showcasing 8 iconic superheroes with animated detail pages, skill stats, and smooth UI.
+
+[🌐 View Live Website](https://wali-ali.github.io/SuperSaga)
+
+---
+
 
 A Marvel-themed React JS project showcasing 8 iconic superheroes with interactive cards, skill bars, animations, and detailed character pages.
 

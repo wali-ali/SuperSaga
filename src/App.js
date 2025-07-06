@@ -6,26 +6,23 @@ import HeroSection from './components/HeroSection';
 import Footer from './components/Footer';
 
 function App() {
-  // 🔄 Track which character is selected (null means none)
   const [selectedChar, setSelectedChar] = useState(null);
 
   return (
     <div>
-      {/* 🔝 Sticky Navigation Bar */}
-      <Navbar />
+      {/* 🔝 Navbar with simple anchor links and reset logic */}
+      <Navbar setSelectedChar={setSelectedChar} />
 
-      {/* 💥 Hero Banner Section (fullscreen intro) */}
+      {/* 💥 Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>
 
-      {/* 🧠 Character Grid or Detail View (toggle based on selectedChar) */}
+      {/* 🧠 Character Section: Either grid or detail */}
       <section id="characters">
         {!selectedChar ? (
-          //  Show all character cards
           <CharacterGrid onCharacterClick={setSelectedChar} />
         ) : (
-          // 🔍 Show expanded detail of selected character
           <CharacterPage character={selectedChar} onBack={() => setSelectedChar(null)} />
         )}
       </section>

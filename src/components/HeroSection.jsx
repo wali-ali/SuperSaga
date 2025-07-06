@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import './mainImages.css'; // Styling for the full-screen hero section
 
+
+const basePath = process.env.PUBLIC_URL;
+
 // Array of image paths to cycle through in the hero background
 const images = [
-  '/images/mainHead1.jpg',
-  '/images/mainHead2.jpg',
-  '/images/mainHead3.jpg',
-  '/images/mainHead4.jpg',
-  '/images/mainHead5.jpg',
+  `${basePath}/images/mainHead1.jpg`,
+  `${basePath}/images/mainHead2.jpg`,
+  `${basePath}/images/mainHead3.jpg`,
+  `${basePath}/images/mainHead4.jpg`,
+  `${basePath}/images/mainHead5.jpg`,
 ];
+
 
 const HeroSection = () => {
   // State to track which image is currently shown
